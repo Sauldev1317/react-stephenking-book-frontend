@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+body, html {
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #EDEDEF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style-type: none;
+  margin: 0 2vw;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav {
+  width: 100vw;
+  height: 56px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  background-color: #533B6B;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+a:hover {
+  background-color: #C6E9FF;
+}
+
+.content {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 24px;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 500px) {
+  nav {
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+  /*shows elements in a column*/
+  ul {
+    flex-direction: column;
+  }
+  
+  /* deletes margin on top or bottom of the a tag*/
+  li {
+    margin: 0;
+  }
+ /* makes sure that the a tag will take the entire screen*/
+  a {
+    display: block;
+    padding: 10px;
+  }
+
+  .content {
+    min-height: auto;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
   }
 }

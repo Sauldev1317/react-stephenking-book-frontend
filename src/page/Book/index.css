@@ -1,0 +1,109 @@
+.container{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-img{
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+}
+
+.img-book{
+    width: 80%;
+}
+
+.container-description {
+    flex: 0.6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: flex-start;
+    gap: 1rem;
+}
+
+.book-title{
+    grid-column: span 2;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.book-description {
+    grid-column: span 2;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.book-date {
+    grid-column: span 2;
+}
+
+.btn {
+    grid-column: span 1;
+    display: inline-block;
+    position: relative;
+    background-position: center;
+    border: none;
+    padding: 1rem 50px;
+    outline: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 4px #999;
+    transition: background 0.8s;
+}
+
+.btn-eliminar {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+.btn-eliminar:hover {
+    background: #ef5350 radial-gradient(circle, transparent 1%, #ef5350 1%) center/15000%;
+}
+
+.btn-eliminar:active {
+    background-color: #ef9a9a;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.btn-update {
+    background-color: #1976d2;
+    color: #fff;
+}
+
+.btn-update:hover {
+    background: #42a5f5 radial-gradient(circle, transparent 1%, #42a5f5 1%) center/15000%;
+}
+
+.btn-update:active {
+    background-color: #90caf9;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+@media only screen and (max-width: 500px) {
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container-img{
+        margin-bottom: 24px;
+    }
+
+    .img-book{
+        width: 70%;
+    }
+
+    .btn {
+        grid-column: span 2;
+    }
+}
